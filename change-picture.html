@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>My Website</title>  
+<style>  
+  body {  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    margin: 0;  
+    padding: 20px;  
+  }  
+    
+  .image-container {  
+    margin: 20px auto;  
+    width: 500px;  
+  }  
+    
+  .image-box {  
+    border: 1px solid #ccc;  
+    padding: 10px;  
+    background-color: #f5f5f5;  
+    text-align: center;  
+  }  
+    
+  .image-box img {  
+    display: block;  
+    margin: 10px auto;  
+    max-width: 100%;  
+    height: auto;  
+  }  
+    
+  .image-box p {  
+    margin: 5px 0;  
+    color: #333;  
+    font-weight: bold;  
+  }  
+    
+  .button {  
+    display: inline-block;  
+    margin: 10px;  
+    padding: 5px 10px;  
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    cursor: pointer;  
+  }  
+</style>  
+</head>  
+<body>  
+  
+<h1>My name is Wu Jing English name is JAY-JAYMZ</h1>  
+  
+<div class="image-container">  
+  <div class="image-box" id="imageBox">  
+    <img src="1.jpg" alt="Image 1" id="image">  
+    <p id="imageText">This is My attractive image</p>  
+    <button class="button" onclick="switchImage()">Replace Image</button>  
+  </div>  
+</div>  
+  
+<script>  
+  var image = document.getElementById('image');  
+  var imageText = document.getElementById('imageText');  
+  var isFirstImage = true;  
+    
+  function switchImage() {  
+    if (isFirstImage) {  
+      image.src = "2.jpg";  
+      imageText.textContent = "This is another me";  
+    } else {  
+      image.src = "1.jpg";  
+      imageText.textContent = "This is My attractive image";  
+    }  
+    isFirstImage = !isFirstImage;  
+  }  
+</script>  
+  
+</body>  
+</html>
